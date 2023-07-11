@@ -10,7 +10,7 @@ const Main = () => {
         <Nav />
       </header>
       <main className="grow">
-        <section className="m-20">
+        <section className="m-10">
           <p className="font-bold text-2xl mb-5">상품 리스트</p>
           <Banner />
           <p className="font-bold text-2xl mb-5">북마크 리스트</p>
