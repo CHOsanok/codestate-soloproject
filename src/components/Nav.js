@@ -1,5 +1,6 @@
 import React from "react";
 import { FaHamburger } from "react-icons/fa";
+import Menu from "./Menu";
 
 const Nav = () => {
   return (
