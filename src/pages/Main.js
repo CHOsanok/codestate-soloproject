@@ -1,7 +1,7 @@
 import React from "react";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
-import Nav from "../components/Nav";
+import Nav from "../components/Head";
 
 const Main = () => {
   return (
@@ -10,10 +10,10 @@ const Main = () => {
         <Nav />
       </header>
       <main className="flex flex-col justify-center items-center grow">
-        <section className="  m-10 ">
-          <p className="font-bold text-2xl mb-5 ">상품 리스트</p>
+        <section className="m-10 ">
+          <p className="font-bold text-2xl mb-5">상품 리스트</p>
           <Banner />
-          <p className="font-bold text-2xl mb-5 text-left">북마크 리스트</p>
+          <p className="font-bold text-2xl mb-5">북마크 리스트</p>
           <Banner />
         </section>
       </main>

@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../components/Footer";
-import Nav from "../components/Nav";
+import Nav from "../components/Head";
 
 const BookMark = () => {
   return (
@@ -9,7 +9,7 @@ const BookMark = () => {
         <Nav />
       </header>
       <main className="flex flex-col justify-center items-center grow">
-        <section className="  m-10 "></section>
+        <section className="m-10 "></section>
       </main>
       <footer className="bottom-0">
         <Footer />

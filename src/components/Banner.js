@@ -9,11 +9,12 @@ const Banner = () => {
           <div>
             <div
               key={idx}
-              className="flex justify-center items-center rounded-xl bg-black text-white w-[264px] h-[210px] mr-3"
+              className="flex justify-center items-center rounded-xl
+              bg-black text-white w-[264px] h-[210px] mr-3"
             >
               Banner
             </div>
-            <p></p>
+            <p>{item}</p>
           </div>
         );
       })}
