@@ -9,15 +9,15 @@ const Main = () => {
       <header className="h-[80px]">
         <Nav />
       </header>
-      <main className="grow">
-        <section className="m-10">
-          <p className="font-bold text-2xl mb-5">상품 리스트</p>
+      <main className="flex flex-col justify-center items-center grow">
+        <section className="  m-10 ">
+          <p className="font-bold text-2xl mb-5 ">상품 리스트</p>
           <Banner />
-          <p className="font-bold text-2xl mb-5">북마크 리스트</p>
+          <p className="font-bold text-2xl mb-5 text-left">북마크 리스트</p>
           <Banner />
         </section>
       </main>
-      <footer className=" bottom-0">
+      <footer className="bottom-0">
         <Footer />
       </footer>
     </div>
