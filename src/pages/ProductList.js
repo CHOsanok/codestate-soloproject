@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "../components/Footer";
+import Kategorie from "../components/Kategorie";
 import Nav from "../components/Nav";
 
 const ProductList = () => {
@@ -9,7 +10,9 @@ const ProductList = () => {
         <Nav />
       </header>
       <main className="flex flex-col justify-center items-center grow">
-        <section className="  m-10 "></section>
+        <section className="  m-10 ">
+          <Kategorie />
+        </section>
       </main>
       <footer className="bottom-0">
         <Footer />
