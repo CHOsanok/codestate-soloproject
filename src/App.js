@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BookMark from "./pages/BookMark";
 import Main from "./pages/Main";
 import ProductList from "./pages/ProductList";
