@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Kategorie = () => {
+const Kategorie = ({ setCurrentKategorie }) => {
   const [selectKategorie, setSelectKategorie] = useState("전체");
 
   const changeKategorie = (e) => {
@@ -15,12 +15,12 @@ const Kategorie = () => {
         : kategorie === "기획전"
         ? "기획전"
         : "브랜드";
-
+    setCurrentKategorie(currentKategorie);
     setSelectKategorie(currentKategorie);
   };
 
   return (
-    <div>
+    <div className="flex flex-row justify-center items-center  mb-10">
       <button onClick={(e) => changeKategorie(e)} className="bg-balck mx-4">
         <img
           className="w-[82px] h-[82px] rounded-full"
