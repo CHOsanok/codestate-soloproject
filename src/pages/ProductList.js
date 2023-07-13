@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Kategorie from "../components/Kategorie";
-import Nav from "../components/Head";
 import Banner from "../components/Banner";
+import Nav from "../components/Head";
 
 const ProductList = () => {
   const [currentKategorie, setCurrentKategorie] = useState("전체");
