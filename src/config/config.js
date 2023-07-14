@@ -1,0 +1,11 @@
+export const BRANDNAME = "brand_name";
+export const BRANDIMAGEURL = "brand_image_url";
+export const BRANDFOLLOWER = "follower";
+export const DISCOUNT = "discountPercentage";
+export const PRICE = "price";
+export const TITLE = "title";
+export const IMAGEURL = "image_url";
+export const SUBTITLE = "sub_title";
+export const TYPE = "type";
+export const FOOTER_CONTENT = "개인정보 처리방침 | 이용약관";
+export const FOOTER_COPYRIGHT = "All rights reserved @ Codestates";

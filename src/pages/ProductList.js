@@ -1,25 +1,17 @@
-import React, { useState } from "react";
-import Footer from "../components/Footer";
-import Kategorie from "../components/Kategorie";
-import Banner from "../components/Banner";
-import Head from "../components/Head";
+import React from "react";
+import { useSelector } from 'react-redux';
+import Category from "../components/Category";
 
 const ProductList = () => {
-  const [currentKategorie, setCurrentKategorie] = useState("전체");
+  const products = useSelector(state => state.dogData);
 
   return (
-    <div className="flex flex-col w-[1280px] h-screen">
-      <header className="h-[80px]">
-        <Head />
-      </header>
+    <div>
       <main className="flex flex-col items-center grow">
-        <section className="m-10">
-          <Kategorie setCurrentKategorie={setCurrentKategorie} />
+        <section  className="h-[640px] m-10 ">
+          <Category products={products}/>
         </section>
       </main>
-      <footer className="bottom-0">
-        <Footer />
-      </footer>
     </div>
   );
 };

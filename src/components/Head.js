@@ -3,15 +3,11 @@ import { FaHamburger } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Menu from "./Menu";
 
-const Nav = () => {
+const Head = () => {
   const [menu, setMenu] = useState(false);
 
-  const menuOnOf = () => {
-    if (!menu) {
-      setMenu(true);
-    } else {
-      setMenu(false);
-    }
+  const menuOnOff = () => {
+     setMenu(!menu)
   };
 
   return (
@@ -26,16 +22,16 @@ const Nav = () => {
         </div>
       </Link>
       <p className=" text-4xl font-bold m-3 ">COZ Shopping</p>
-      <button className="flex  absolute right-10" onClick={menuOnOf}>
+      <button className="flex  absolute right-10" onClick={menuOnOff}>
         <FaHamburger />
       </button>
       {menu && (
         <div className="flex  absolute right-10">
-          <Menu />
+          <Menu setMenu={setMenu}/>
         </div>
       )}
     </div>
   );
 };
 
-export default Nav;
+export default Head;
