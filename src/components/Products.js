@@ -12,7 +12,7 @@ import {
 
 const Products = ({ products, currentType }) => {
   return (
-    <div className="grid grid-cols-4 w-[1128px] h-10 mb-5">
+    <div className="grid grid-cols-4 gap-10 w-[1128px]">
       {products.length !== 0 &&
         products.map((item) => {
           if (item.type === currentType || currentType === "All") {
