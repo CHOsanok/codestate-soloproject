@@ -1,6 +1,6 @@
 import "./App.css";
-import React, {useEffect} from "react";
-import { useDispatch } from 'react-redux';
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BookMark from "./pages/BookMark";
 import Main from "./pages/Main";
@@ -15,12 +15,12 @@ function App() {
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
-      .then((data) => dispatch({ type: 'SET_DOGS', payload: data }));
+      .then((data) => dispatch({ type: "SET_DOGS", payload: data }));
   }, [dispatch]);
 
   return (
     <BrowserRouter>
-      <div className="flex flex-col w-[1280px] h-screen">
+      <div className="flex flex-col relative w-[1280px] h-[1200px]">
         <header className="h-[80px]">
           <Head />
         </header>
@@ -29,7 +29,7 @@ function App() {
           <Route path="/Product" element={<ProductList />} />
           <Route path="/BookMark" element={<BookMark />} />
         </Routes>
-        <footer className="bottom-0">
+        <footer className="absolute bottom-0">
           <Footer />
         </footer>
       </div>

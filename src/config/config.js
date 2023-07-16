@@ -1,3 +1,5 @@
+export const PRODUCTLIST = "상품 리스트";
+export const BOOKMARKLIST = "북마크 리스트";
 export const BRANDNAME = "brand_name";
 export const BRANDIMAGEURL = "brand_image_url";
 export const BRANDFOLLOWER = "follower";
@@ -7,5 +9,8 @@ export const TITLE = "title";
 export const IMAGEURL = "image_url";
 export const SUBTITLE = "sub_title";
 export const TYPE = "type";
+export const USERNAME = "OOO님, 안녕하세요!";
+export const PRODUCTPAGE = "상품리스트 페이지";
+export const BOOKMARKPAGE = "북마크 페이지";
 export const FOOTER_CONTENT = "개인정보 처리방침 | 이용약관";
 export const FOOTER_COPYRIGHT = "All rights reserved @ Codestates";

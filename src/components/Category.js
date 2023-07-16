@@ -1,24 +1,20 @@
 import React, { useState } from "react";
-import {
-  BRANDNAME,
-  BRANDIMAGEURL,
-  BRANDFOLLOWER,
-  DISCOUNT,
-  PRICE,
-  TITLE,
-  SUBTITLE,
-  IMAGEURL,
-} from "../config/config";
+import { BRANDIMAGEURL, IMAGEURL } from "../config/config";
 
-const cateArr = ["All", "Product", "Category", "Exhibition", "Brand"];
-
-const Category = ({ products }) => {
+const Category = ({ products, setCurrentType }) => {
   const [currentCategory, setCurrentCategory] = useState("전체");
 
   const changeCategory = (e) => {
     const CATEGORY = e.target.nextElementSibling.textContent;
     setCurrentCategory(CATEGORY);
+
+    if (CATEGORY === "상품") setCurrentType("Product");
+    if (CATEGORY === "카테고리") setCurrentType("Category");
+    if (CATEGORY === "기획전") setCurrentType("Exhibition");
+    if (CATEGORY === "브랜드") setCurrentType("Brand");
+    if (CATEGORY === "전체") setCurrentType("All");
   };
+  const cateArr = ["All", "Product", "Category", "Exhibition", "Brand"];
 
   return (
     <div className="flex flex-row justify-center items-center  mb-10">
