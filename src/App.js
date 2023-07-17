@@ -21,7 +21,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="flex flex-col relative w-[1280px] h-[1200px]">
-        <header className="h-[80px]">
+        <header className="h-[80px] z-40">
           <Head />
         </header>
         <Routes>

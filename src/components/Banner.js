@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { BsStarFill } from "react-icons/bs";
 import {
   BRANDNAME,
   BRANDIMAGEURL,
@@ -11,10 +12,20 @@ import {
 } from "../config/config";
 
 const Banner = ({ products }) => {
+  const [productList, setProductList] = useState(products);
+
+  const bookMarkChange = (itemId) => {
+    setProductList((prevProducts) =>
+      prevProducts.map((item) =>
+        item.id === itemId ? { ...item, bookmarked: !item.bookmarked } : item
+      )
+    );
+  };
+
   return (
     <div className="flex flex-row w-[1128px] overflow-hidden overflow-x-scroll mb-5">
-      {products.length !== 0 &&
-        products.map((item) => {
+      {productList.length !== 0 &&
+        productList.map((item) => {
           const NAME =
             item.type === "Category"
               ? `#${item[TITLE]}`
@@ -43,13 +54,20 @@ const Banner = ({ products }) => {
           }
 
           const subNmaeStyle = item.type !== "Exhibition" ? "text-right" : "";
+          const bookMarkCheck = item.bookmarked ? "text-yellow-300" : "";
 
           return (
             <div key={item.id}>
               <div
-                className="flex justify-center items-center rounded-2xl
+                className="flex justify-center items-center relative rounded-2xl
                          bg-black text-white w-[264px] h-[210px] mr-3"
               >
+                <button
+                  onClick={() => bookMarkChange(item.id)}
+                  className="absolute bottom-3 right-3 text-2xl"
+                >
+                  <BsStarFill className={bookMarkCheck} />
+                </button>
                 <img
                   className="h-full rounded-2xl w-[264px]"
                   src={IMAGE}
