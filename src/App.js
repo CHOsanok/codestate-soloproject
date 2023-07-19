@@ -1,24 +1,39 @@
-import logo from "./logo.svg";
 import "./App.css";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import BookMark from "./pages/BookMark";
+import Main from "./pages/Main";
+import ProductList from "./pages/ProductList";
+import Head from "./components/Head";
+import Footer from "./components/Footer";
 
 function App() {
+  const url = "http://cozshopping.codestates-seb.link/api/v1/products?count=10";
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => dispatch({ type: "SET_DOGS", payload: data }));
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="flex flex-col relative w-[1280px] h-[1200px]">
+        <header className="h-[80px] z-40">
+          <Head />
+        </header>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/Product" element={<ProductList />} />
+          <Route path="/BookMark" element={<BookMark />} />
+        </Routes>
+        <footer className="absolute bottom-0">
+          <Footer />
+        </footer>
+      </div>
+    </BrowserRouter>
   );
 }
 
